@@ -242,6 +242,26 @@ There is a general `cites` intention, but this is already implied and should be 
 
 # Results
 
+## Pangenome Viewer
+
+To enable browser-based exploration of the chromosome-specific GFA files generated in the preceding analyses, we developed a program that extracts shared nodes, non-reference sequences, path orientations, within-path positions, and local similarity measures and converts them into lightweight JSON files. Using the Satsuma mandarin CUNphKu haplotype (CUN#1) as the reference coordinate system, we developed the Unshu Haplotype Viewer, which allows six haplotypes from Satsuma mandarin, Kishu mandarin, and Kunenbo mandarin to be compared within a common coordinate system (Figure X).
+
+![unshu haplotype viewer SS](./unshu-haplotype-viewer.png)
+Figure X. The Unshu Haplotype Viewer. The viewer presents the six haplotype paths, reference-sequence support, non-reference branches, local similarity to the parental lineages, and candidate-gene search results within the same genomic interval.
+
+The viewer provides both a combined display of all six haplotypes and two three-haplotype views that compare each Satsuma haplotype with either the Kishu or Kunenbo lineage. It supports chromosome-wide overviews, interval zooming, horizontal panning, reference-node coverage, candidate inverted regions, the amount of non-reference sequence, and local graph visualization. In the local graph, sequences following the reference path are distinguished from non-reference branches, and each branch is coloured according to the haplotypes that traverse it. Shared-node similarity between each Satsuma haplotype and the four parental haplotypes is also displayed along the chromosomes, allowing users to examine whether a region is more similar to the Kishu or Kunenbo lineage. These views facilitate visual exploration of candidate switches in parental origin, structural variation, and potential assembly or phasing inconsistencies.
+
+To facilitate investigation of genotype–phenotype relationships, we registered literature-derived candidate genes associated with sweetness, acidity, bitterness, aroma, peel colour, fruit size, seedlessness, polyembryony, and bioactive compounds. We also constructed a search index containing 49,322 genes from the MiGD2 CUNphKi and CUNphKu v2 primary-transcript annotations. Users can navigate to any annotated gene by searching for a gene ID, transcript ID, homologous-gene symbol, functional description, or genomic coordinate. CUNphKu annotation coordinates are used directly, whereas CUNphKi coordinates are projected onto CUN#1 using shared GFA nodes. The viewer reports the projection method and shared-node coverage. Genes that cannot be placed on chromosomes 1–9 remain available in the search index.
+
+A Help page describing the calculations and their interpretive limitations was included, together with a separate URL for accessing the previous assembly version. The viewer was published through GitHub Pages, and the source code, display data, and data-conversion programs were released in a public GitHub repository.
+
+GitHub repository: https://github.com/moriya-dbcls/unshu-haplotype-viewer
+
+Public viewer: https://moriya-dbcls.github.io/unshu-haplotype-viewer/
+
+Shared-node similarity and path switching do not directly establish parental origin. They were therefore treated as exploratory measures for identifying candidate regions that require further validation through nucleotide-level alignment, structural-variant analysis, and HiFi read support.
+
+Database and visualization-tool development has traditionally emphasized generic designs intended for long-term reuse. In contrast, the principal components of this viewer were implemented within several hours through interaction with AI, demonstrating that interfaces tailored to a particular dataset and research question can now be developed rapidly. This does not mean that general-purpose design is no longer necessary. Standardization, maintainability, and reusability remain essential for infrastructure intended to support multiple studies and datasets over an extended period. For exploratory research with a restricted scope, however, rapidly developing a purpose-specific viewer may be more efficient. Future development should therefore distinguish between components that require a reusable, general-purpose foundation and those that are better implemented for a specific research question, according to the expected lifetime of the resource, its intended users, the diversity of the input data, and the goals of the analysis.
 
 # Discussion
 
