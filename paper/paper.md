@@ -1,8 +1,8 @@
 ---
-title: 'DBCLS BioHackathon 2026 report: Template for the very long title'
-title_short: 'BioHackJP26: How we found breakfast'
+title: 'Let's citrusize pangenome graphs.'
+title_short: 'mikan-pangenome'
 tags:
-  - Semantic web
+  - Pangenome
   - Ontologies
   - Workflows
 authors:
