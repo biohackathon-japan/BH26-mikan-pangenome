@@ -1,5 +1,5 @@
 ---
-title: 'Let's citrusize pangenome graphs.'
+title: "Let's citrusize pangenome graphs."
 title_short: 'mikan-pangenome'
 tags:
   - Pangenome
