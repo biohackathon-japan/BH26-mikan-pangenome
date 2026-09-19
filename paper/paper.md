@@ -28,7 +28,7 @@ affiliations:
     index: 1
   - name: Kitasato University
     index: 2
-  - name: DBCLS
+  - name: Database Division for Life Science (DBCLS), BioData Science Initiative (BSI), National Institute of Genetics, Research Organization of Information and Systems, Chiba, Japan
     index: 3
 date: 18 September 2026
 cito-bibliography: paper.bib
