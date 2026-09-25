@@ -269,7 +269,7 @@ Table: Practical pitfalls encountered in this project, how each one is detected,
 | Pitfall | How it presents | Detection | Response |
 | --- | --- | --- | --- |
 | PGGB `-B` (transclose-batch) default fails to parse in some builds | Run succeeds; graph is under-compressed | `transclose-batch` in `*.params.yml`; compression ratio > 0.9 | Always pass `-B` explicitly (`-B 1G`) and verify it in the parameter record |
-| GFA dialect mismatch | Tool reports zero paths on a valid `.gfa` | `grep -c '^P'` vs `grep -c '^W'` | `vg convert -g in.gfa -f -W` to write `P` lines; rGFA has no paths at all |
+| GFA dialect mismatch | Tool reports zero paths on a valid `.gfa` | \verb|grep -c '^P'| vs \verb|grep -c '^W'| | `vg convert -g in.gfa -f -W` to write `P` lines; rGFA has no paths at all |
 | Arbitrary PanSN haplotype numbering | Two analyses of the same data disagree in direction | Which file is `hap1_path` in the samplesheet | Fix and document the mapping (here `CUN#1` = CUNphKu, `CUN#2` = CUNphKi); check it before comparing with others |
 | Unequal path lengths distort Jaccard | Pedigree test fails although the graph is fine | AVG-based test NO, MAX-based test YES | Use MAX-based comparison; longer paths inflate the union and depress Jaccard |
 | Multi-allelic expansion in `vg deconstruct` | Variant counts an order of magnitude above expectation | Compare with and without `-e` | Read counts as records, not as independent variants |
