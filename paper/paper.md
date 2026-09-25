@@ -313,11 +313,11 @@ yardstick, a RAD-Seq F1 population of 96 genuine Kunenbo × Kishu offspring, Sat
 distribution of real offspring under both releases, at the same percentile (93.8). We therefore do
 not claim that r2.0 corrected r1.0: there is no independent ground truth for Satsuma, and which
 release is closer to biology cannot be decided from this comparison. What the exercise does
-establish is methodological (Figure \ref{figMosaic}) — that a quantity as direct as assembly
+establish is methodological (Figure 1) — that a quantity as direct as assembly
 length moved by 16% while a conclusion resting on relative comparison did not move at all, and that
 the attribution was only possible because exactly one thing was varied.
 
-![The Satsuma ancestry mosaic called independently from the two assembly releases with an identical
+![Figure 1. The Satsuma ancestry mosaic called independently from the two assembly releases with an identical
 pipeline. Each pair of tracks gives the two Satsuma haplotypes along one chromosome, in that
 release's own `CUN#1` coordinates (dashed line = chromosome length in that release). Colour is the
 contributing parent (blue, Kishu; orange, Kunenbo), hatching marks haplotype 2 of that parent, and
@@ -338,9 +338,9 @@ rather than kept as an errata list.
 
 ## Pangenome Viewer
 
-To enable browser-based exploration of the chromosome-specific GFA files generated in the preceding analyses, we developed a program that extracts shared nodes, non-reference sequences, path orientations, within-path positions, and local similarity measures and converts them into lightweight JSON files. Using the Satsuma mandarin CUNphKu haplotype (CUN#1) as the reference coordinate system, we developed the Unshu Haplotype Viewer, which allows six haplotypes from Satsuma mandarin, Kishu mandarin, and Kunenbo mandarin to be compared within a common coordinate system (Figure \ref{figViewer}).
+To enable browser-based exploration of the chromosome-specific GFA files generated in the preceding analyses, we developed a program that extracts shared nodes, non-reference sequences, path orientations, within-path positions, and local similarity measures and converts them into lightweight JSON files. Using the Satsuma mandarin CUNphKu haplotype (CUN#1) as the reference coordinate system, we developed the Unshu Haplotype Viewer, which allows six haplotypes from Satsuma mandarin, Kishu mandarin, and Kunenbo mandarin to be compared within a common coordinate system (Figure 2).
 
-![The Unshu Haplotype Viewer. The viewer presents the six haplotype paths, reference-sequence support, non-reference branches, local similarity to the parental lineages, and candidate-gene search results within the same genomic interval. \label{figViewer}](./unshu-haplotype-viewer.png){ width=100% }
+![Figure ２. The Unshu Haplotype Viewer. The viewer presents the six haplotype paths, reference-sequence support, non-reference branches, local similarity to the parental lineages, and candidate-gene search results within the same genomic interval. \label{figViewer}](./unshu-haplotype-viewer.png){ width=100% }
 
 The viewer provides both a combined display of all six haplotypes and two three-haplotype views that compare each Satsuma haplotype with either the Kishu or Kunenbo lineage. It supports chromosome-wide overviews, interval zooming, horizontal panning, reference-node coverage, candidate inverted regions, the amount of non-reference sequence, and local graph visualization. In the local graph, sequences following the reference path are distinguished from non-reference branches, and each branch is coloured according to the haplotypes that traverse it. Shared-node similarity between each Satsuma haplotype and the four parental haplotypes is also displayed along the chromosomes, allowing users to examine whether a region is more similar to the Kishu or Kunenbo lineage. These views facilitate visual exploration of candidate switches in parental origin, structural variation, and potential assembly or phasing inconsistencies.
 
